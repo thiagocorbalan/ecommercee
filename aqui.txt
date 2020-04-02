@@ -1,0 +1,6 @@
+.connect ('mongodb+srv://tay:t999929024:@cluster0-dgcxj.mongodb.net/test?retryWrites=true&w=majority', {
+
+frontend 
+bootstrap
+router
+style components
