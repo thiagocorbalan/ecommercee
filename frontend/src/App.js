@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './component/Navbar';
 import ProdutoList from './component/ProdutoList';
 import Datails from './component/Datails';
-import Cart from './component/Cart';
+import Cart from './component/Cart/Cart.js';
 import Default from './component/Default';
 import Modal from './component/Modal';
 

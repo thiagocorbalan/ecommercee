@@ -10,39 +10,38 @@ export default class Modal extends Component {
             <ProdutoConsumer>
                 {value => {
                     const { modalOpen, closeModal } = value;
-                    //  const{ img, title,  price } = value.modalProduto;
-                    console.log(value);
+                      const{ img, title, price } = value.modalProdact;
 
-                    if(!modalOpen) {
-                        return null;
-                    } else {
+                     if(!modalOpen) {
+                         return null;
+                 } else {
                         return (
                         <ModalContainer>
-                            <div className="container">
-                            <div className="row">
-                            <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 
-                            text-center text-capitalize p-5">
-                                <h5> item added to the cart</h5>
-                                <img src={img} className="img-fluid" alt="produto" />
-                            <h5>{title}</h5>
-                            <h5 className="text-muted">price : ${price}</h5>
-                            <Link to='/' />
-                            <ButtonContainer onClick={() => closeModal()}>
-                                shopping
-
-                            </ButtonContainer>
-                            <Link to="/cart" />
-                            <ButtonContainer cart onClick={()=> closeModal()}>
-                                cart
-                            </ButtonContainer>
-                            </div>
+                        <div className="container">
+                        <div className="row">
+                        <div id="modal" className="col-8 mx-auto col-md-6 col-lg-4 
+                        text-center text-capitalize p-5">
+                            <h5> item added to the cart</h5>
+                            <img src={img} className="img-fluid" alt="produto" />
+                        <h5>{title}</h5>
+                        <h5 className="text-muted">price : ${price}</h5>
+                        <Link to="/" />
+                        <ButtonContainer onClick={() => closeModal()}>
+                            shopping
+                        </ButtonContainer>
+                        <Link to="/cart">
+                        <ButtonContainer cart onClick={()=> closeModal()}>
+                            cart
+                        </ButtonContainer>
+                        </Link>
+                        </div>
                                 
-                                </div>
                             </div>
+                        </div>
 
-                        </ModalContainer>
-                        );
-                    }
+                    </ModalContainer>
+                    );
+                }
                 }}
             </ProdutoConsumer>
         );

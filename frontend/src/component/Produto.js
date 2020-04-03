@@ -9,7 +9,7 @@ export default class Produto extends Component {
     const {id, title, img, price, inCart } = this.props.produto;
   return (
     <ProdutoWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3">
-        <div class="card">
+        <div className="card">
         <ProdutoConsumer>
           {value => (
            <div className="img-container p-5" 
@@ -40,7 +40,7 @@ export default class Produto extends Component {
           </ProdutoConsumer>
           {/* card footer */}
           <div className="card-footer d-flex justify-content-between">
-            <p clasName="align-self-center mb-0">
+            <p className="align-self-center mb-0">
               {title}
             </p>
           <h5 className="text-blue font-italic mb-0">
